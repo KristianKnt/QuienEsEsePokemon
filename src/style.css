@@ -4,6 +4,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.container-gap {
+  gap: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* TARJETA */
 .card {
   width: 280px;
@@ -99,4 +107,11 @@ body {
   background-color: #fff8e1;
   border-color: #e0a800;
   color: #212529;
+}
+
+@media screen and (min-width: 768px) {
+  .container-gap {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
