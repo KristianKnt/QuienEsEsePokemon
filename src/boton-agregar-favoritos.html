@@ -1,18 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar a Favoritos</title>
+     <style>
+        .boton-favoritos {
+            background-color: white;
+            color: #212529;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: bold;
+        }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .mi-clase-muestra {
-      background: yellow;
-    }
-  </style>
+        .estrella-favoritos {
+            color: #ffc107;
+            margin-right: 5px;
+        }
+
+        .boton-favoritos:hover {
+            background-color: #fff8e1;
+            border-color: #e0a800;
+            color: #212529;
+        }
+    </style>
 </head>
 
 <body>
+
+    <button
+        type="button"
+        id="btnAgregarFavoritos"
+        class="btn boton-favoritos"
+    >
+        <span class="estrella-favoritos">★</span>
+        Agregar a favoritos
+    </button>
 
 </body>
 
