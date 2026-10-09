@@ -12,18 +12,19 @@
 </head>
 
 <body>
-  <!-- boton buscar -->
   <button id="btnBuscar" class="btn btn-primary">
     <i class="bi bi-search"></i>
     Buscar
   </button>
 
-  <!-- inicio tarjeta -->
+  <button type="button" id="btnLimpiar" class="btn btn-outline-dark">
+    🧹 Limpiar
+  </button>
+
+
   <div class="card">
-    <!-- Imagen del personaje -->
     <img src="https://placeholder.com" alt="Imagen del personaje" class="card-img">
 
-    <!-- Cuerpo de la tarjeta -->
     <div class="card-body">
       <div class="card-header">
         <h2 class="card-title">Furius Dragon</h2>
@@ -68,22 +69,20 @@
     <h2 class="mb-3">Todos los Pokémon</h2>
     <div id="listaPokemones" class="container">
       <div class="row g-4" id="gridPokemones">
-        <!-- Aquí el equipo inyectará las tarjetas de Pokémon -->
+        <!-- Aquí se inyectarán las tarjetas de Pokémon -->
       </div>
     </div>
   </section>
-  <!-- TODOS LOS POKEMON -->
 
-  <!-- inicio seccion favoritos -->
+  <!-- FAV -->
   <section class="py-4">
     <h2 class="mb-3">Favoritos</h2>
     <div id="listaFavoritos" class="container">
       <div class="row g-4" id="gridFavoritos">
-        <!-- Aquí el equipo inyectará las tarjetas de favoritos -->
+        <!-- Aquí se inyectarán las tarjetas de favoritos -->
       </div>
     </div>
   </section>
-  <!-- fin seccion favoritos -->
 
 
   <!-- boton agregar favoritos
@@ -98,9 +97,6 @@
     <i class="bi bi-x-octagon-fill"></i>
     Eliminar
   </button> -->
-
-  <!-- boton limpiar -->
-  <button type="button" id="btnLimpiar" class="btn btn-outline-dark"> 🧹 Limpiar </button>
 
   <script>
     const inputPokemon = document.getElementById("inputPokemon");
