@@ -29,8 +29,8 @@ const tarjetaPokemon = (pokemon) => `
               Agregar a favoritos
             </button>
           </div>
-          <div class="col">
-            <button type="button" class="btn-solid theme-danger btnEliminar" data-nombre="${pokemon.nombre}">
+          <div class="col mt-3">
+            <button type="button" class="btn-solid theme-danger w-100" data-nombre="${pokemon.nombre}">
               <i class="bi bi-x-octagon-fill"></i>
               Eliminar
             </button>
