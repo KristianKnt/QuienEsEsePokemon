@@ -14,7 +14,7 @@ export async function buscarPokemon(nombrePokemon) {
     const ataque = datos.stats.find((estado) => estado.stat.name === "attack").base_stat;
     const defensa = datos.stats.find((estado) => estado.stat.name === "defense").base_stat;
 
-    console.log({nombre, imagen, ataque, defensa});
+    console.log({ nombre, imagen, ataque, defensa });
     return { nombre, imagen, ataque, defensa };
   } catch (error) {
     console.error(error);
@@ -37,8 +37,8 @@ export async function buscarPokemonPrimeros(tipo) {
     const pokemones = datos.results.map((pokemon) => ({
       nombre: pokemon.name,
       imagen: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.url.split('/')[3]}.png`,
-      ataque: pokemon.stats.stat.name === "attack" ? pokemon.stats.base_stat : null,
-      
+      ataque: data.stats.find(s => s.stat.name === "attack").base_stat, defensa: data.stats.find(s => s.stat.name === "defense").base_stat,
+
     }));
 
     console.log(pokemones);
