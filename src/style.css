@@ -1,0 +1,117 @@
+body {
+  background-color: #ffffff;
+  color: #212529;
+  font-family: Arial, sans-serif;
+}
+
+.container-gap {
+  gap: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TARJETA */
+.card {
+  width: 280px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #e0e0e0;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-badge {
+  background-color: #ff4757;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2f3542;
+}
+
+/* FAV */
+.boton-favoritos {
+  background-color: white;
+  color: #212529;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.estrella-favoritos {
+  color: #ffc107;
+  margin-right: 5px;
+}
+
+.boton-favoritos:hover {
+  background-color: #fff8e1;
+  border-color: #e0a800;
+  color: #212529;
+}
+
+@media screen and (min-width: 768px) {
+  .container-gap {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}

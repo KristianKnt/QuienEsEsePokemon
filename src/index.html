@@ -9,201 +9,31 @@
     integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* estilo del body */
-    body {
-      background-color: #ffffff;
-      color: #212529;
-      font-family: Arial, sans-serif;
-    }
-
-
-    /* inicio estilos tarjeta */
-
-    /* Contenedor principal de la tarjeta */
-    .card {
-      width: 280px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      border: 1px solid #e0e0e0;
-    }
-
-    /* Imagen superior */
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    /* Espaciado del contenido */
-    .card-body {
-      padding: 16px;
-    }
-
-    /* Encabezado: Nombre y Tipo en la misma línea */
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .card-title {
-      margin: 0;
-      font-size: 1.4rem;
-      color: #333;
-    }
-
-    /* Etiqueta de tipo (Badge) */
-    .card-badge {
-      background-color: #ff4757;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: bold;
-    }
-
-    .card-description {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0 0 16px 0;
-      line-height: 1.4;
-    }
-
-    /* Sección de estadísticas */
-    .card-stats {
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid #f0f0f0;
-      padding-top: 12px;
-    }
-
-    /* Cada bloque de estadística individual */
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex: 1;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      color: #888;
-      margin-bottom: 4px;
-    }
-
-    .stat-value {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #2f3542;
-    }
-
-    /* fin estilos tarjeta */
-
-
-
-    .mi-clase-muestra {
-      background: yellow;
-    }
-
-    /* cambios de boton agregar favoritos */
-    .boton-favoritos {
-      background-color: white;
-      color: #212529;
-      border: 2px solid #ffc107;
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-weight: bold;
-    }
-
-    .estrella-favoritos {
-      color: #ffc107;
-      margin-right: 5px;
-    }
-
-    .boton-favoritos:hover {
-      background-color: #fff8e1;
-      border-color: #e0a800;
-      color: #212529;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- boton buscar -->
   <button id="btnBuscar" class="btn btn-primary">
     <i class="bi bi-search"></i>
     Buscar
   </button>
 
-  <!-- inicio tarjeta -->
-  <div class="card">
-    <!-- Imagen del personaje -->
-    <img src="https://placeholder.com" alt="Imagen del personaje" class="card-img">
+  <button type="button" id="btnLimpiar" class="btn btn-outline-dark">
+    🧹 Limpiar
+  </button>
 
-    <!-- Cuerpo de la tarjeta -->
-    <div class="card-body">
-      <div class="card-header">
-        <h2 class="card-title">Furius Dragon</h2>
-        <span class="card-badge">Fuego</span>
-      </div>
-
-      <p class="card-description">Una criatura mítica que habita en las profundidades de los volcanes activos.</p>
-
-      <!-- Estadísticas y Atributos -->
-      <div class="card-stats">
-        <div class="stat-item">
-          <span class="stat-label">🔥 Ataque</span>
-          <span class="stat-value">85</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">🛡️ Defensa</span>
-          <span class="stat-value">70</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-label">❤️ Vida (HP)</span>
-          <span class="stat-value">120</span>
-        </div>
-      </div>
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col"><button type="button" id="btnAgregarFavoritos" class="btn boton-favoritos">
-              <span class="estrella-favoritos">★</span>
-              Agregar a favoritos
-            </button></div>
-          <div class="col"><button type="button" class="btn-solid theme-danger">
-              <i class="bi bi-x-octagon-fill"></i>
-              Eliminar
-            </button></div>
-        </div>
-      </div>
+  <!-- FAV -->
+  <section class="container py-3">
+    <h2 class="mb-3">Favoritos</h2>
+    <div class="container-gap g-4" id="gridFavoritos">
     </div>
-  </div>
-  <!-- fin tarjeta -->
+  </section>
 
-
-
-
-
-  <!-- boton agregar favoritos
-  <button type="button" id="btnAgregarFavoritos" class="btn boton-favoritos">
-    <span class="estrella-favoritos">★</span>
-    Agregar a favoritos
-  </button> -->
-
-
-  <!-- boton eliminar
-  <button type="button" class="btn-solid theme-danger">
-    <i class="bi bi-x-octagon-fill"></i>
-    Eliminar
-  </button> -->
-
-  <!-- boton limpiar -->
-  <button type="button" id="btnLimpiar" class="btn btn-outline-dark"> 🧹 Limpiar </button>
+  <!-- TODOS LOS POKEMON -->
+  <section class="container py-3">
+    <h2 class="mb-3">Todos los Pokémon</h2>
+    <div class="container-gap row g-4" id="gridPokemones">
+    </div>
+  </section>
 
   <script>
     const inputPokemon = document.getElementById("inputPokemon");
@@ -217,10 +47,10 @@
   </script>
 
 
-
   <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
     crossorigin="anonymous"></script>
+  <script src="main.js"></script>
   <script src="script.js"></script>
 </body>
 
