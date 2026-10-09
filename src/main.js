@@ -1,3 +1,9 @@
+import {buscarPokemon,buscarPokemonPrimeros} from "./api.js";
+
+buscarPokemon("pikachu");
+buscarPokemonPrimeros("fuego");
+
+
 const tarjetaPokemon = (pokemon) => `
   <div class="card">
     <img src="${pokemon.imagen}" alt="${pokemon.nombre}" class="card-img">
